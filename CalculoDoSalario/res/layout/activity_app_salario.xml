@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.com.android.AppSalario" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite seu salário (em R$)" />
+
+    <EditText
+        android:id="@+id/edsalario"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edsalario"
+        android:layout_below="@+id/edsalario"
+        android:layout_marginTop="22dp"
+        android:text="Qual é o seu percentual?" />
+
+    <RadioGroup
+        android:id="@+id/rgopcoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/rb50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="50%" />
+
+        <RadioButton
+            android:id="@+id/rb45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45%" />
+
+        <RadioButton
+            android:id="@+id/rb40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40%" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btncalcular"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgopcoes"
+        android:layout_centerHorizontal="true"
+        android:text="Calcular novo salário" />
+
+</RelativeLayout>
